@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- icon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="ico\favicon.ico">
+   <link rel="icon" type="image/png" sizes="32x32" href="ico\favicon.ico">
+   <link rel="icon" type="image/png" sizes="16x16" href="ico\favicon.ico">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" >
+
+     <title>Learn</title>
+    <script>
+        function finalCost(){
+            var roomType = document.getElementById("room_type").value;
+            var roomNum = document.getElementById("room_number").value;
+            var personNum = document.getElementById("person_number").value;
+            var childNum = document.getElementById("child_number").value;
+            var resFacilities = document.getElementById("res_facilities").value;
+
+            var total = (parseInt(roomType)*10) + ((roomNum)*2) + ((personNum)*3) + ((childNum)*2) + ((resFacilities)*5)
+
+            document.getElementById("result").innerHTML = total;
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+       <a class="navbar-brand font-weight-bold" href="#"> <img src="img\android-chrome-192x192.png"> </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ml-auto medium-500">
+           <li class="nav-item active">
+             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="profile.html">For School</a>
+           </li>
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             For Business
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="profile.html"> Interview preparation</a>
+               <a class="dropdown-item" href="profile.html"> Travels </a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="profile.html"> Improve your communication</a>
+             </div>
+           </li>
+            <li class="nav-item">
+             <a class="nav-link" href="profile.html"> Group Lessons </a>
+           </li>
+            <li class="nav-item">
+             <a class="nav-link" href="login.html"> Log in</a>
+           </li>
+            <li class="nav-item">
+             <a class="nav-link" href="#"> Blog </a>
+           </li>
+         </ul>    
+       </div>
+       </div>
+     </nav>
+     
+
+    <div>
+        <p>
+            Buy more hours to get a discount
+        </p>
+    </div>
+
+
+
+
+     <div class="hotel_reserve_box">
+         <h3> Your subscription plan </h3><br>
+         <form>
+             <div class="form-group">
+                 <label>Language and desired level</label>
+                 <select class="form-control" id="room_type" onchange="finalCost()">
+                     <option value="0" selected> Language and desired level </option>
+                     <option value="1"> English beginer </option>
+                     <option value="2"> English intermediate </option>
+                     <option value="3"> English advanced </option>
+                     <option value="4"> French beginer  </option>
+                     <option value="5"> French intermediate </option>
+                     <option value="6"> French Advanced </option>
+                     <option value="7"> interview/exam preparation </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of hours per week</label>
+                 <select class="form-control" id="room_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> more </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of persons</label>
+                 <select class="form-control" id="person_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of children</label>
+                 <select class="form-control" id="child_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             
+             <div class="form-group">
+                 <label> are you more than 7 in number?</label>
+                 <select class="form-control" id="res_facilities" onchange="finalCost()">
+                     <option value="0" selected> more than 7? </option>
+                     <option value="2"> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div>  
+             <br>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                 <span id="result" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+                 <label><a href=""> proceed </a> </label>
+             </div>
+         </form>
+     </div>
+
+  
+
+     
+<div style="background-color:#fef6ed">
+    <div class="container py-5">
+    <div class="row pt-5">
+    <div class="col-md-6 col-lg-3 mb-5">
+    <h3 class="font-weight-bold mb-4"> i learn</h3>
+    <p class="semi-bold">
+    The best way to learn a language.
+    </p>
+    <div class="social-icons mt-4"> <a href="#"><i class="lni lni-facebook-filled"></i></a> <a href="#"><i class="lni lni-twitter-filled"></i></a> <a href="#"><i class="lni lni-instagram-filled"></i></a> <a href="#"><i class="lni lni-github-original"></i></a> </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-5">
+    <h6 class="mb-4 font-weight-bold">Our Services</h6>
+    <ul class="list-unstyled bb m-0">
+    <li><a href="">For Individuals</a></li>
+    <li><a href="">For Academic</a></li>
+    <li><a href="">For Interview preparation</a></li>
+    <li><a href="">For Businesses</a></li>
+    </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-5">
+    <h6 class="mb-4 font-weight-bold"> <span>i</span> learn </h6>
+    <ul class="list-unstyled bb m-0">
+    <li><a href="">About Us</a></li>
+    <li><a href="">Blog</a></li>
+    <li><a href="">signup</a></li>
+    <li><a href="">comments</a></li>
+    </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-5">
+    <h6 class="mb-4 font-weight-bold"> Privacy & Terms </h6>
+    <ul class="list-unstyled bb m-0">
+    <li><a href=""> Community </a></li>
+    <li><a href=""> Privacy </a></li>
+    <li><a href=""> Terms </a></li>
+    <li><a href=""> Copyright </a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="py-3 bg-white">
+      <div class="container">
+        <p class="m-0 text-center small medium-500">Copyright &copy; I learn 2023. ilearn.com </p>
+      </div> 
+    </div>
+    
+
+
+</body>
+</html>
